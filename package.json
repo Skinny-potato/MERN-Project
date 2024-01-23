@@ -1,0 +1,42 @@
+{
+  "name": "mern-project",
+  "version": "1.0.0",
+  "description": "ecommerce website",
+  "main": "backend",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "herok-postbuild":"NPM_CONFIG_PRODUCTION=false && npm install--prefix frontend && npm run build--prefix frontend"
+  },
+  "keywords": [
+    "lets",
+    "do",
+    "this"
+  ],
+  "author": "skinny potato",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@material-ui/lab": "^4.0.0-alpha.61",
+    "@mui/material": "^5.15.2",
+    "@mui/x-data-grid": "^6.18.6",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cloudinary": "^1.26.3",
+    "cookie-parser": "^1.4.6",
+    "country-state-city": "^3.2.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.0",
+    "nodemailer": "^6.7.6",
+    "nodemon": "^2.0.20",
+    "overlay-navbar": "^1.2.3",
+    "stripe": "^14.10.0",
+    "validator": "^13.7.0"
+  }
+}

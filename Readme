@@ -1,0 +1,26 @@
+# the information written here is not sorted
+
+for the product to deploy, we need to first create its structure technically called as model and then based on that model we create a product
+
+\*\*controller folder consits of all the functions of a product for eg to get all the products list and all
+\*\* models folder consits of the structure of all the components which we will use in our site for eg model structure of a product and model structure of a review of a product
+\*\*route products consits of all the omported files from the controller folder and then it sets up a path for us to access it from the website
+\*\*Utils and middle ware folder consits of some function which can be used any where after imporitng those functions
+--> catchasyncErrors is used to verify the try catch of an async function, normally we do the catch try of an async function with in the function it self but for the case of DRY, we create a function and import it where we want to use it
+--> error.js file consits of all the error possible for all the different cases
+-->apifeatures.js file consits of all the features like filter and pagination.
+
+--> create a model then export it..
+-->after exporting it to controllers add the functions which we will use
+-->User models require some installments, after which they could be accessed
+-->Unlike ProductController, UserController has many other features like user login, password reset etc
+--> these features require aditional assignments and functions which can be established in files of middleware, and utils
+-->jwtToken contains the tokenizer code for the reseting of the password
+-->There are 4 things to be done in backend : Orders, Products, User, other stuff like auth.js, error handling etc
+-->After this we enter into frontend
+-->start the front end by creating a react app. npx create-react-app
+
+
+## New ideas
+real time status must be used every where  
+setup an alert function for admin functionalities 
