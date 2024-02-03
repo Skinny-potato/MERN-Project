@@ -37,10 +37,10 @@ app.use("/api/v1", payment);
 //to host static files 
 // app.use(express.static(...)) for serving static files:
 // app.get("*", ...) for handling client-side routing:
-app.use(express.static(path.join(__dirname+"../../frontend/build")))
-app.get("*",(req,res)=>{
-    res.sendFile(path.resolve(__dirname+"../../frontend/build/index.html"))
-})
+// app.use(express.static(path.join(__dirname+"../../frontend/build")))
+// app.get("*",(req,res)=>{
+//     res.sendFile(path.resolve(__dirname+"../../frontend/build/index.html"))
+// })
 
 //middleware for error
 app.use(errorMiddleware);
