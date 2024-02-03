@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import "./UpdateProfile.css";
 import Loader from "../layout/Loader/loader";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import FaceIcon from "@material-ui/icons/Face";
@@ -66,7 +66,7 @@ const UpdateProfile = ({history}) => {
         type: UPDATE_PROFILE_RESET,
       });
     }
-  }, [dispatch, error, alert, history, isUpdated, user]);
+  }, [dispatch, error, alert, history, isUpdated, user, navigate]);
   return (
     <Fragment>
       {loading ? (

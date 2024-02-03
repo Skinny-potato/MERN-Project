@@ -60,21 +60,7 @@ const Dashboard = () => {
     const sevenDaysTimeStamp = new Date(newDate).getTime()
     return {presentTimeStamp,sevenDaysTimeStamp}
   }
-  const checkTheDeliveryStatus = async()=>{
-    const { data } = await axios.get("/api/v1/admin/orders");
-    let orders = data.orders
-    orders.forEach((order)=>{
-      let orderTimes = timeStampGenerator(order.CreatedAt)
 
-      if (orderTimes.presentTimeStamp >= orderTimes.sevenDaysTimeStamp && order.orderStatus!=="Delivered"){
-        console.log("your order should be delivered")
-        dispatch(updateOrder(order._id, {"status":"Delivered"}));
-      }
-
-    })
-
-
-  }
 
   let outOfStock = 0;
 
@@ -85,11 +71,26 @@ const Dashboard = () => {
       }
     });
   useEffect(() => {
+    const checkTheDeliveryStatus = async()=>{
+      const { data } = await axios.get("/api/v1/admin/orders");
+      let orders = data.orders
+      orders.forEach((order)=>{
+        let orderTimes = timeStampGenerator(order.CreatedAt)
+  
+        if (orderTimes.presentTimeStamp >= orderTimes.sevenDaysTimeStamp && order.orderStatus!=="Delivered"){
+          console.log("your order should be delivered")
+          dispatch(updateOrder(order._id, {"status":"Delivered"}));
+        }
+  
+      })
+  
+  
+    }
     dispatch(getAdminProduct());
     dispatch(getAllOrders());
     dispatch(getAllUsers());
     checkTheDeliveryStatus()
-  }, [dispatch, checkTheDeliveryStatus]);
+  }, [dispatch]);
 
   let totalAmount = 0;
   orders &&

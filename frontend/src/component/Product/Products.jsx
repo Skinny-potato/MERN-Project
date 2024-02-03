@@ -57,7 +57,6 @@ const Products = ({ match }) => {
     ratings,
     alert,
     error,
-    getProduct,
   ]);
 
   const priceHandler = (event, newPrice) => {

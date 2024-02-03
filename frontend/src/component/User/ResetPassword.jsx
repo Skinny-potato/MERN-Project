@@ -41,11 +41,11 @@ const ResetPassword = ({ history }) => {
     }
 
     if (success) {
-      alert.success("Password Updated Successfully");
+    alert.success("Password Updated Successfully");
 
       navigate("/login");
     }
-  }, [dispatch, error, alert, history, success]);
+  }, [dispatch, error, alert, history, success, navigate]);
 
   return (
     <Fragment>
