@@ -66,5 +66,5 @@
     ]
   },
   "devDependencies": {},
-  "proxy": "http://localhost:4000/"
+  "proxy": "https://ecommerce-app-y1h8.onrender.com"
 }
