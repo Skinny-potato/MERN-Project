@@ -88,6 +88,7 @@ const UpdateProduct = ({ history, match }) => {
     productId,
     product,
     updateError,
+    navigate
   ]);
 
   const updateProductSubmitHandler = (e) => {

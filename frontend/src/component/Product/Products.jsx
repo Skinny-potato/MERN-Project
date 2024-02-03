@@ -1,4 +1,4 @@
-import React, { Fragment, useLayoutEffect, useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import "./Products.css";
 import { useSelector, useDispatch } from "react-redux";
 import { clearErrors, getProduct } from "../../actions/productAction";

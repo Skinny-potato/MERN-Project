@@ -21,8 +21,8 @@ import { getAllUsers } from "../../actions/userAction.jsx";
 import MetaData from "../layout/MetaData.js";
 import { getAllOrders } from "../../actions/orderAction.js";
 import {
-  getOrderDetails,
-  clearErrors,
+  // getOrderDetails,
+  // clearErrors,
   updateOrder,
 } from "../../actions/orderAction";
 import axios from "axios"
@@ -89,7 +89,7 @@ const Dashboard = () => {
     dispatch(getAllOrders());
     dispatch(getAllUsers());
     checkTheDeliveryStatus()
-  }, [dispatch]);
+  }, [dispatch, checkTheDeliveryStatus]);
 
   let totalAmount = 0;
   orders &&
