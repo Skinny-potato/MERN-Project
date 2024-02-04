@@ -39,6 +39,7 @@ import UserList from './component/Admin/UserList.jsx';
 import UpdateUser from './component/Admin/UpdateUser.jsx';
 import ProductReviews from './component/Admin/ProductReviews.jsx';
 import NotFound from './component/layout/Notfound/NotFound.jsx';
+// import dotenv from "dotenv"
 
 
 
@@ -65,6 +66,7 @@ function App() {
     })
     store.dispatch(loadUser());
     getStripeApiKey()
+    // dotenv.config();
 
   }, [])
   //to prevent people from right clicking not being able to get inspect

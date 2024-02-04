@@ -7,6 +7,13 @@ const fileupload = require("express-fileupload");
 // const dotenv = require("dotenv")
 const path =require("path")
 
+//Cors issue 
+const cors = require('cors');
+const corsOptions ={
+    origin: ['http://localhost:3000', 'https://superb-valkyrie-79002c.netlify.app/']
+}
+app.use(cors(corsOptions));
+
 
 //config
 if(process.env.NODE_ENV!=="production"){

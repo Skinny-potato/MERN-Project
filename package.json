@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js",
-    "herok-postbuild":"NPM_CONFIG_PRODUCTION=false && npm install--prefix frontend && npm run build--prefix frontend"
+    "herok-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install--prefix frontend && npm run build--prefix frontend"
   },
   "keywords": [
     "lets",
@@ -27,14 +27,15 @@
     "body-parser": "^1.20.0",
     "cloudinary": "^1.26.3",
     "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "country-state-city": "^3.2.1",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-fileupload": "^1.4.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.4.0",
-    "nodemailer": "^6.7.6",
-    "nodemon": "^2.0.20",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.12.6",
+    "nodemailer": "^6.9.9",
+    "nodemon": "^3.0.3",
     "overlay-navbar": "^1.2.3",
     "stripe": "^14.10.0",
     "validator": "^13.7.0"

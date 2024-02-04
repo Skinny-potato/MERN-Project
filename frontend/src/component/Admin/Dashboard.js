@@ -72,7 +72,7 @@ const Dashboard = () => {
     });
   useEffect(() => {
     const checkTheDeliveryStatus = async()=>{
-      const { data } = await axios.get("/api/v1/admin/orders");
+      const { data } = await axios.get(`${process.env.REACT_APP_API_ROUTE}/api/v1/admin/orders`);
       let orders = data.orders
       orders.forEach((order)=>{
         let orderTimes = timeStampGenerator(order.CreatedAt)
