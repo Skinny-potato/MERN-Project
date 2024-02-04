@@ -47,7 +47,7 @@ export const login = (email, password) => async (dispatch) => {
     const config = { headers: { "Content-Type": "application/json" } };
 
     const { data } = await axios.post(
-      `/api/v1/login`,
+      `${process.env.REACT_APP_API_ROUTE}/api/v1/login`,
       { email, password },
       config
     );

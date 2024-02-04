@@ -10,7 +10,7 @@ const path =require("path")
 //Cors issue 
 const cors = require('cors');
 const corsOptions ={
-    origin: ['http://localhost:3000', 'https://superb-valkyrie-79002c.netlify.app/']
+    origin: ['http://localhost:3000', 'https://superb-valkyrie-79002c.netlify.app', "*"]
 }
 app.use(cors(corsOptions));
 
