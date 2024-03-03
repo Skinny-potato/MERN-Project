@@ -36,7 +36,7 @@ import {
   USER_DETAILS_FAIL,
   CLEAR_ERRORS,
 } from "../constants/userConstants";
-
+import Cookies from "js-cookie";
 import axios from "axios";
 
 // Login
@@ -51,7 +51,7 @@ export const login = (email, password) => async (dispatch) => {
       { email, password },
       config
     );
-
+    Cookies.set("token", data.token, { expires: 7 });
     dispatch({ type: LOGIN_SUCCESS, payload: data.user });
   } catch (error) {
     dispatch({ type: LOGIN_FAIL, payload: error.response.data.message });
@@ -81,7 +81,6 @@ export const loadUser = () => async (dispatch) => {
     dispatch({ type: LOAD_USER_REQUEST });
 
     const { data } = await axios.get(`${process.env.REACT_APP_API_ROUTE}/api/v1/me`);
-
     dispatch({ type: LOAD_USER_SUCCESS, payload: data.user });
   } catch (error) {
     dispatch({ type: LOAD_USER_FAIL, payload: error.response.data.message });
