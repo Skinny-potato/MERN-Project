@@ -67,7 +67,7 @@ export const getAdminProduct = () => async (dispatch) => {
     const token = Cookies.get("token")
     let config_headers = {
       headers: {
-        "Cookie": token
+        //"Cookie": token
       }
     }
     const { data } = await axios.get(`${process.env.REACT_APP_API_ROUTE}/api/v1/admin/products`, config_headers);
@@ -93,7 +93,7 @@ export const createProduct = (productData) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Cookie": token
+        //"Cookie": token
       },
     };
 
@@ -124,7 +124,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Cookie": token
+        //"Cookie": token
       },
     };
 
@@ -155,7 +155,7 @@ export const getProductDetails = (id) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Cookie": token
+        //"Cookie": token
       },
     };
     const { data } = await axios.get(`${process.env.REACT_APP_API_ROUTE}/api/v1/product/${id}`, config);
@@ -181,7 +181,7 @@ export const deleteProduct = (id) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Cookie": token
+        //"Cookie": token
       },
     };
     const { data } = await axios.delete(`${process.env.REACT_APP_API_ROUTE}/api/v1/admin/product/${id}`, config);
@@ -208,7 +208,7 @@ export const newReview = (reviewData) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Cookie": token
+        //"Cookie": token
       },
     };
 
@@ -236,7 +236,7 @@ export const getAllReviews = (id) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Cookie": token
+        //"Cookie": token
       },
     };
 
@@ -263,12 +263,12 @@ export const deleteReviews = (reviewId, productId) => async (dispatch) => {
     const config = {
       headers: {
         "Content-Type": "application/json",
-        "Cookie": token
+        //"Cookie": token
       },
     };
     const { data } = await axios.delete(
       `${process.env.REACT_APP_API_ROUTE}/api/v1/reviews?id=${reviewId}&productId=${productId}`,
-      config      
+      config
     );
 
     dispatch({

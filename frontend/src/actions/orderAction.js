@@ -34,7 +34,7 @@ export const createOrder = (order) => async (dispatch) => {
         const config = {
             headers: {
                 "Content-Type": "application/json",
-                "Cookie": token
+                //"Cookie": token
             },
         };
         const { data } = await axios.post(`${process.env.REACT_APP_API_ROUTE}/api/v1/order/new`, order, config)
@@ -56,7 +56,7 @@ export const getAllOrders = () => async (dispatch) => {
         const config = {
             headers: {
                 "Content-Type": "application/json",
-                "Cookie": token
+                //"Cookie": token
             },
         };
         const { data } = await axios.get(`${process.env.REACT_APP_API_ROUTE}/api/v1/admin/orders`, config);
@@ -80,7 +80,7 @@ export const updateOrder = (id, order) => async (dispatch) => {
         const config = {
             headers: {
                 "Content-Type": "application/json",
-                "Cookie": token
+                //"Cookie": token
             },
         };
         const { data } = await axios.put(
@@ -107,7 +107,7 @@ export const deleteOrder = (id) => async (dispatch) => {
         const config = {
             headers: {
                 "Content-Type": "application/json",
-                "Cookie": token
+                //"Cookie": token
             },
         };
         const { data } = await axios.delete(`${process.env.REACT_APP_API_ROUTE}/api/v1/admin/order/${id}`, config);
@@ -131,7 +131,7 @@ export const myOrders = () => async (dispatch) => {
         const config = {
             headers: {
                 "Content-Type": "application/json",
-                "Cookie": token
+                //"Cookie": token
             },
         };
 
@@ -156,7 +156,7 @@ export const getOrderDetails = (id) => async (dispatch) => {
         const config = {
             headers: {
                 "Content-Type": "application/json",
-                "Cookie": token
+                //"Cookie": token
             },
         };
 
