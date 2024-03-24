@@ -34,7 +34,7 @@ import {
   // DELETE_REVIEW_RESET,
   CLEAR_ERRORS,
 } from "../constants/productConstants";
-import Cookies from "js-cookie";
+// import Cookies from "js-cookie";
 
 // all products
 export const getProduct = (keyword = "", currentPage = 1, price = [0, 2500000], category, ratings = 0) => async (dispatch) => {
@@ -64,7 +64,7 @@ export const getProduct = (keyword = "", currentPage = 1, price = [0, 2500000], 
 export const getAdminProduct = () => async (dispatch) => {
   try {
     dispatch({ type: ADMIN_PRODUCT_REQUEST });
-    const token = Cookies.get("token")
+    //const token = Cookies.get("token")
     let config_headers = {
       headers: {
         //"Cookie": token
@@ -87,7 +87,7 @@ export const getAdminProduct = () => async (dispatch) => {
 // create a new product 
 export const createProduct = (productData) => async (dispatch) => {
   try {
-    const token = Cookies.get("token")
+    //const token = Cookies.get("token")
     dispatch({ type: NEW_PRODUCT_REQUEST });
 
     const config = {
@@ -119,7 +119,7 @@ export const createProduct = (productData) => async (dispatch) => {
 export const updateProduct = (id, productData) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PRODUCT_REQUEST });
-    const token = Cookies.get("token")
+    //const token = Cookies.get("token")
 
     const config = {
       headers: {
@@ -150,7 +150,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
 export const getProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
-    const token = Cookies.get("token")
+    //const token = Cookies.get("token")
 
     const config = {
       headers: {
@@ -176,7 +176,7 @@ export const getProductDetails = (id) => async (dispatch) => {
 export const deleteProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_PRODUCT_REQUEST });
-    const token = Cookies.get("token")
+    //const token = Cookies.get("token")
 
     const config = {
       headers: {
@@ -203,7 +203,7 @@ export const newReview = (reviewData) => async (dispatch) => {
   try {
     dispatch({ type: NEW_REVIEW_REQUEST });
 
-    const token = Cookies.get("token")
+    //const token = Cookies.get("token")
 
     const config = {
       headers: {
@@ -231,7 +231,7 @@ export const newReview = (reviewData) => async (dispatch) => {
 export const getAllReviews = (id) => async (dispatch) => {
   try {
     dispatch({ type: ALL_REVIEW_REQUEST });
-    const token = Cookies.get("token")
+    //const token = Cookies.get("token")
 
     const config = {
       headers: {
@@ -258,7 +258,7 @@ export const getAllReviews = (id) => async (dispatch) => {
 export const deleteReviews = (reviewId, productId) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_REVIEW_REQUEST });
-    const token = Cookies.get("token")
+    //const token = Cookies.get("token")
 
     const config = {
       headers: {

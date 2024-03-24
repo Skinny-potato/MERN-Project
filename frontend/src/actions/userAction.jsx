@@ -83,7 +83,7 @@ export const register = (userData) => async (dispatch) => {
 export const loadUser = () => async (dispatch) => {
   try {
     dispatch({ type: LOAD_USER_REQUEST });
-    const token = Cookies.get("token");
+    //const token = Cookies.get("token");
 
     const config = {
       headers: {
@@ -118,7 +118,7 @@ export const updateProfile = (userData) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PROFILE_REQUEST });
 
-    const token = Cookies.get("token");
+    //const token = Cookies.get("token");
 
     const config = {
       headers: {
@@ -146,7 +146,7 @@ export const updatePassword = (passwords) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PASSWORD_REQUEST });
 
-    const token = Cookies.get("token");
+    //const token = Cookies.get("token");
 
     const config = {
       headers: {
@@ -174,7 +174,7 @@ export const forgotPassword = (email) => async (dispatch) => {
   try {
     dispatch({ type: FORGOT_PASSWORD_REQUEST });
 
-    const token = Cookies.get("token");
+    //const token = Cookies.get("token");
 
     const config = {
       headers: {
@@ -201,7 +201,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
   try {
     dispatch({ type: RESET_PASSWORD_REQUEST });
 
-    const token = Cookies.get("token");
+    //const token = Cookies.get("token");
 
     const config = {
       headers: {
@@ -228,7 +228,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
 export const getAllUsers = () => async (dispatch) => {
   try {
     dispatch({ type: ALL_USERS_REQUEST });
-    const token = Cookies.get("token");
+    //const token = Cookies.get("token");
 
     const config = {
       headers: {
@@ -251,7 +251,7 @@ export const getAllUsers = () => async (dispatch) => {
 export const getUserDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: USER_DETAILS_REQUEST });
-    const token = Cookies.get("token");
+    //const token = Cookies.get("token");
 
     const config = {
       headers: {
@@ -275,7 +275,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_USER_REQUEST });
 
-    const token = Cookies.get("token");
+    //const token = Cookies.get("token");
 
     const config = {
       headers: {
@@ -303,7 +303,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
 export const deleteUser = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_USER_REQUEST });
-    const token = Cookies.get("token");
+    //const token = Cookies.get("token");
 
     const config = {
       headers: {
